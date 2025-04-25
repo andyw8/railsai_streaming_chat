@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the [Streaming Chat tutorial](https://railsai.com/docs/streaming-chat) from RailsAI, with some small changes:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Uses Rails 8
+* Uses ActiveJob and SolidQueue instead of Redis and Sidekiq
+* Uses OpenRouter instead of OpenAI
