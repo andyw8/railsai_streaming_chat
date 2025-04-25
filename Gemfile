@@ -59,3 +59,4 @@ group :test do
 end
 
 gem "ruby-openai"
+gem "devise"
