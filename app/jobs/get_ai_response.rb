@@ -11,7 +11,10 @@ class GetAiResponse < ApplicationJob
   private
 
   def call_openai(chat:)
-    OpenAI::Client.new.chat(
+    OpenAI::Client.new(
+      access_token: ENV.fetch("OPENROUTER_ACCESS_TOKEN"),
+      uri_base: "https://openrouter.ai/api/v1",
+    ).chat(
       parameters: {
         model: "gpt-3.5-turbo",
         messages: Message.for_openai(chat.messages),
