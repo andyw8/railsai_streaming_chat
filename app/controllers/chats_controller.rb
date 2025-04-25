@@ -2,6 +2,8 @@ class ChatsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_chat, only: %i[show]
 
+  respond_to :html
+
   def show
     respond_with(@chat)
   end
