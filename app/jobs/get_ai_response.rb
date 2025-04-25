@@ -1,4 +1,6 @@
-class GetAiResponse < SidekiqJob
+class GetAiResponse < ApplicationJob
+  queue_as :default
+
   RESPONSES_PER_MESSAGE = 1
 
   def perform(chat_id)
